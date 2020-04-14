@@ -6,7 +6,7 @@ from std_msgs.msg import Bool
 def talker():
     pub = rospy.Publisher('flick', Bool, queue_size=10)
     rospy.init_node('flick30', anonymous=True)
-    rate = rospy.Rate(10)
+    rate = rospy.Rate(30)
     while not rospy.is_shutdown():
         flickering = 1
         pub.publish(flickering)
